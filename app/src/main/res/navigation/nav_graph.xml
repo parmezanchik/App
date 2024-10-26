@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/NotesListFragment"
+        android:name="com.example.primarynotesapp.ui.recyclerview.NotesListFragment"
+        android:label="TextListFragment">
+
+    </fragment>
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.primarynotesapp.ui.main.MainFragment"
+        android:label="MainFragment" >
+        <action
+            android:id="@+id/action_mainFragment_to_NotesListFragment"
+            app:destination="@id/NotesListFragment"
+            app:enterAnim="@android:anim/fade_in" />
+    </fragment>
+
+</navigation>
